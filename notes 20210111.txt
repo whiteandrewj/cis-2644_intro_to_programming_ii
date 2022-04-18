@@ -1,0 +1,6 @@
+interpreter
+REPL - read evaluate print loop
+
+would it be correct to say all shells are interpreters?
+
+switch statement, do while
