@@ -1,0 +1,7 @@
+# vs code compile definition file
+tasks.json
+
+# genrated by microsoft visual c++ (MSVC) compiler toolset
+*.ilk
+*.obj
+*.pdb
