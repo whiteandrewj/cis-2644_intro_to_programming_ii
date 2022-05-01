@@ -2,9 +2,9 @@
 .vscode/*
 
 # executables
-#*.exe
+*.exe
 
 # genrated by microsoft visual c++ (MSVC) compiler toolset
 *.ilk
 *.obj
-#*.pdb
+*.pdb
