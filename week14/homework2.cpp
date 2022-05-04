@@ -18,7 +18,7 @@ int main()
     }
     cout << "even numbers in the set: " << endl;
     for_each(nums.begin(),nums.end(),[](int n){ if((n % 2) == 0) {cout << n << " ";} });
-    cout << endl;
+    cout << endl << endl;
 
     map<string,string> contacts;
     string proceed = "y";
@@ -34,9 +34,6 @@ int main()
         cout << "Contacts entry: (" << name << "," << contacts[name] << ")" << endl;
         cout << "Enter another? (y/n): ";
         cin >> proceed;
-    }    
-
-
-
+    }
     return 0;
 }
