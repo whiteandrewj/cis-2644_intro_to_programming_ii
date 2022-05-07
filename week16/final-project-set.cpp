@@ -10,7 +10,10 @@ using namespace std;
 string scrubString(string istring) {
     string ostring = "";
     for (char c : istring) {
-        if (c != '"' && c != '.' && c != ',' && c != ':' && c != ';' && c != '!' && c != '(' && c != ')') {
+        if (c != '"' && c != '.' && c != ',' && c != ':' && c != ';' && c != '!' && c != '('
+            && c != ')' && c != '1' && c != '2' && c != '3' && c != '4' && c != '5' && c != '6'
+            && c != '7' && c != '8' && c != '9' && c != '0' )
+        {
             c = tolower(c);
             ostring.push_back(c);
         }
@@ -23,7 +26,9 @@ set<string> parseStringToSet(string istring, char delim) {
     stringstream strStream(istring);
     while(strStream.good()) {
         getline(strStream,word,delim);
-        uniqueWords.insert(word);
+        if(word != "") {
+            uniqueWords.insert(word);
+        }  
     } 
     return uniqueWords;
 }
@@ -49,7 +54,7 @@ int main()
     //cout << fullText;  
     
     set<string> words = parseStringToSet(fullText,' ');
-    for_each(words.begin(), words.end(), [] (string w) { cout << w << endl; });
+    for_each(words.begin(), words.end(), [] (string w) { cout << w << " "; });
 
     return 0;
 }
