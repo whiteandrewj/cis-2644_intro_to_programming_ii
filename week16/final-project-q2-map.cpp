@@ -28,8 +28,6 @@ string decrypt(string istring, map<char,char> key) {
 
 int main()
 {
-    string plaintext = "the quick brown fox jumped over the lazy dog";
-    
     map<char, char> key;
     for (int i = 0; i < 26; i++) {
         key.insert({i+97,i+33});
@@ -41,6 +39,7 @@ int main()
         cout << c->first << c->second << endl;
     }
     */
+    string plaintext = "the quick brown fox jumped over the lazy dog";
 
     string ciphertext = encrypt(plaintext, key);
     cout << ciphertext << endl;
